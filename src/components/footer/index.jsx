@@ -3,7 +3,8 @@ import "./footer.scss";
 class index extends Component {
   render() {
     return (
-      <div className="container-fluid bg-dark p-5">
+      <footer>
+        <div className="container-fluid bg-dark p-5">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-3 p-4">
             <h1 className="text-light">About Us</h1>
@@ -62,6 +63,7 @@ class index extends Component {
           </div>
         </div>
       </div>
+      </footer>
     );
   }
 }

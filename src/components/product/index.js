@@ -11,6 +11,7 @@ import "./product.scss"
 
 class index extends Component {
   render() {
+    const images = [p1,p2,p3,p4];
     return (
       <div className="container-fluid ">
         <div className="row" style={{ background: "#efefef" }}>
@@ -48,46 +49,7 @@ class index extends Component {
           <h1 className="p-5">Related Items</h1>
         </div>
         <div className="row p-5">
-          <div className="col-sm-12 col-md-6 col-lg-3">
-            <Card
-              img={p1}
-              title="Title"
-              description="Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit.  rerum officia ratione dolore eos
-                voluptatibus eius ad. Dolor, omnis."
-              linkTitle="Buy Now"
-            />{" "}
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-3 ">
-            <Card
-              img={p2}
-              title="Title"
-              description="Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit.  rerum officia ratione dolore eos
-              voluptatibus eius ad. Dolor, omnis."
-              linkTitle="Buy Now"
-            />{" "}
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-3">
-            <Card
-              img={p3}
-              title="Title"
-              description="Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit.  rerum officia ratione dolore eos
-              voluptatibus eius ad. Dolor, omnis."
-              linkTitle="Buy Now"
-            />{" "}
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-3">
-            <Card
-              img={p4}
-              title="Title"
-              description="Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit.  rerum officia ratione dolore eos
-              voluptatibus eius ad. Dolor, omnis."
-              linkTitle="Buy Now"
-            />{" "}
-          </div>
+          {images.map(el=> <Card img={el}/>)}
         </div>
       </div>
     );
